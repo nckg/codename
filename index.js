@@ -38,7 +38,16 @@ module.exports = function (opts) {
 
       return generate(listNames.map(getList), filterNames.map(getFilter));
     },
-    lists: _.partial(_.keys, lists)
+    lists: _.partial(_.keys, lists),
+    byVersion: function ( listNames, version ) {
+      var versions = version.split( '.' );
+      var lists = listNames.map(getList);
+      versions.reverse();
+
+      return _.map( versions, function( version, index ) {
+        return lists[ index ][ version ];
+      } );
+    }
   };
 };
 
