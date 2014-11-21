@@ -3,12 +3,9 @@
   "version": "0.0.3",
   "description": "Codename generator",
   "main": "index.js",
-  "repository": "git://git@github.com:rjz/codename.git",
+  "repository": "git://git@github.com:nckg/codename.git",
   "bin": {
     "codename": "./bin/codename"
-  },
-  "scripts": {
-    "test": "./node_modules/jshint/bin/jshint **/*.js && ./node_modules/jasmine-node/bin/jasmine-node test"
   },
   "author": "RJ Zaworski <rj@rjzaworski.com>",
   "license": "WTFPL",
